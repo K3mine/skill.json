@@ -21,6 +21,20 @@
       "category": "video"
     },
     {
+      "name": "lipsync",
+      "source": "agentspace-so/runcomfy-agent-skills",
+      "install": "npx -y skills add agentspace-so/runcomfy-agent-skills --skill lipsync --agent claude-code -g",
+      "description": "Lip-sync d'un visage sur une piste audio (OmniHuman / Sync Labs)",
+      "category": "video"
+    },
+    {
+      "name": "runcomfy-cli",
+      "source": "agentspace-so/runcomfy-agent-skills",
+      "install": "npx -y skills add agentspace-so/runcomfy-agent-skills --skill runcomfy-cli --agent claude-code -g",
+      "description": "CLI runcomfy : installation et authentification, base des skills RunComfy",
+      "category": "core"
+    },
+    {
       "name": "ai-voice-cloning",
       "source": "inferen-sh/skills",
       "install": "npx -y skills add inferen-sh/skills --skill ai-voice-cloning --agent claude-code -g",
