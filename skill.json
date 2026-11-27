@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "video-voice-skills",
+  "description": "Pack de skills Claude Code pour la vidéo et la voix : face swap, avatar parlant, clonage de voix, montage ffmpeg.",
+  "agent": "claude-code",
+  "skills": [
+    {
+      "name": "face-swap",
+      "source": "runcomfy-com/skills",
+      "install": "npx -y skills add runcomfy-com/skills --skill face-swap --agent claude-code",
+      "scope": "project",
+      "description": "Swap visage vidéo (Wan 2-2 / Kling)",
+      "category": "video"
+    },
+    {
+      "name": "ai-avatar-video",
+      "source": "agentspace-so/runcomfy-agent-skills",
+      "install": "npx skills add agentspace-so/runcomfy-agent-skills --skill ai-avatar-video -g",
+      "scope": "global",
+      "description": "Face + voix en 1 passe (OmniHuman)",
+      "category": "video"
+    },
+    {
+      "name": "ai-voice-cloning",
+      "source": "inferen-sh/skills",
+      "install": "npx -y skills add inferen-sh/skills --skill ai-voice-cloning --agent claude-code",
+      "scope": "project",
+      "description": "Clonage de voix",
+      "category": "voice"
+    },
+    {
+      "name": "voice-clone-from-video",
+      "source": "itsryanarmani/skills",
+      "install": "npx skills add itsryanarmani/skills --skill voice-clone-from-video -g",
+      "scope": "global",
+      "description": "Clone ta voix depuis un clip vidéo",
+      "category": "voice"
+    },
+    {
+      "name": "ffmpeg-skill",
+      "source": "npm:ffmpeg-skill",
+      "install": "npx ffmpeg-skill",
+      "scope": "local",
+      "description": "Montage local, mux audio/vidéo",
+      "category": "editing"
+    }
+  ]
+}
