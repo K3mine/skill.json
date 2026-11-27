@@ -3,46 +3,44 @@
   "name": "video-voice-skills",
   "description": "Pack de skills Claude Code pour la vidéo et la voix : face swap, avatar parlant, clonage de voix, montage ffmpeg.",
   "agent": "claude-code",
+  "scope": "global",
+  "installDir": "~/.claude/skills",
   "skills": [
     {
       "name": "face-swap",
       "source": "runcomfy-com/skills",
-      "install": "npx -y skills add runcomfy-com/skills --skill face-swap --agent claude-code",
-      "scope": "project",
+      "install": "npx -y skills add runcomfy-com/skills --skill face-swap --agent claude-code -g",
       "description": "Swap visage vidéo (Wan 2-2 / Kling)",
       "category": "video"
     },
     {
       "name": "ai-avatar-video",
       "source": "agentspace-so/runcomfy-agent-skills",
-      "install": "npx skills add agentspace-so/runcomfy-agent-skills --skill ai-avatar-video -g",
-      "scope": "global",
+      "install": "npx -y skills add agentspace-so/runcomfy-agent-skills --skill ai-avatar-video --agent claude-code -g",
       "description": "Face + voix en 1 passe (OmniHuman)",
       "category": "video"
     },
     {
       "name": "ai-voice-cloning",
       "source": "inferen-sh/skills",
-      "install": "npx -y skills add inferen-sh/skills --skill ai-voice-cloning --agent claude-code",
-      "scope": "project",
+      "install": "npx -y skills add inferen-sh/skills --skill ai-voice-cloning --agent claude-code -g",
       "description": "Clonage de voix",
       "category": "voice"
     },
     {
       "name": "voice-clone-from-video",
       "source": "itsryanarmani/skills",
-      "install": "npx skills add itsryanarmani/skills --skill voice-clone-from-video -g",
-      "scope": "global",
+      "install": "npx -y skills add itsryanarmani/skills --skill voice-clone-from-video --agent claude-code -g",
       "description": "Clone ta voix depuis un clip vidéo",
       "category": "voice"
     },
     {
       "name": "ffmpeg-skill",
       "source": "npm:ffmpeg-skill",
-      "install": "npx ffmpeg-skill",
-      "scope": "local",
+      "install": "npx -y ffmpeg-skill --claude",
       "description": "Montage local, mux audio/vidéo",
-      "category": "editing"
+      "category": "editing",
+      "note": "Installeur propre (pas le CLI skills) : refuse -g ; --claude installe déjà dans ~/.claude/skills/ffmpeg-skill."
     }
   ]
 }
